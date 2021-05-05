@@ -6,13 +6,15 @@ To view, run `yarn dev` and go to localhost:3000. You should see a JSON data dum
 
 To see where the data is being served from, view the file pages/api/data.js. You will want to edit this for things like filtering based on incoming requests.
 
-As far as the client, see index.js. That's really it.
+As far as the client, see pages/index.js. That's really it.
+
+If you are unfamiliar with Next.js, anything in pages gets turned into a route, and any routes beginning with `api` will be api routes.
 
 Feel free to modify structure, adding new pages or a folder for components.
 
 What I would like to see:
 
-Add a filter to search by address. All filtering and such should be done server-side. Somethings to consider: how do you handle a fast typer and limit requests? Use a custom hook for this if you can. How do you handle pagination? What approach do you take to styling?
+Add a filter to search by address. All filtering and such should be done server-side. Some things to consider: how do you handle a fast typer and limit requests? Use a custom hook for this if you can. How do you handle pagination? What approach do you take to styling?
 
 Feel free to add external libraries. Use any approach to styling you wish...be it styled-components, tailwind, material-ui etc.
 
