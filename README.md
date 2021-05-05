@@ -1,34 +1,21 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## Quanta Code Assessment
 
-## Getting Started
+This is a small Next.js app. Some data has been generated for fake loans. Each row should contain a company name, email, and then an address and amount.
 
-First, run the development server:
+To view, run `yarn dev` and go to localhost:3000. You should see a JSON data dump.
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+To see where the data is being served from, view the file pages/api/data.js. You will want to edit this for things like filtering based on incoming requests.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+As far as the client, see index.js. That's really it.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+Feel free to modify structure, adding new pages or a folder for components.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+What I would like to see:
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+Add a filter to search by address. All filtering and such should be done server-side. Somethings to consider: how do you handle a fast typer and limit requests? Use a custom hook for this if you can. How do you handle pagination? What approach do you take to styling?
 
-## Learn More
+Feel free to add external libraries. Use any approach to styling you wish...be it styled-components, tailwind, material-ui etc.
 
-To learn more about Next.js, take a look at the following resources:
+Zip the final code (exluding node_modules please) and email to abrown@quantafinance.com.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+If you are unfamiliar with Next.js, you can read about it here: https://nextjs.org/learn/basics/create-nextjs-app
