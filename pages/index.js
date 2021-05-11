@@ -5,11 +5,32 @@ import useSWR from 'swr'
 
 import styles from '../styles/Home.module.css'
 
+import SearchAddress from './component/SearchAddress';
+
 const fetcher = (...args) => fetch(...args).then((res) => res.json())
 
 export default function Home() {
   const { data: result, error } = useSWR('/api/data', fetcher)
   
+  const showResults = () => {
+    // Show the message below when there is an error.
+    // Maybe error itself is not user firendly so lets show a message that is more user-friendly
+    if(error) {
+      return (
+        <h5 style={{color: 'red'}}>
+          There was an error. Please try again or email abrown@quantafinance.com
+        </h5>
+      );
+    }
+
+    //if results are not in
+    if(!result) {
+      return (<h5>Loading...</h5>);
+    }
+
+    return <SearchAddress data={result} />;
+  };
+
   return (
     <div className={styles.container}>
       <Head>
@@ -19,11 +40,7 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-
-        <div>
-          {JSON.stringify(result)}
-        </div>
-
+        {showResults()}
       </main>
     </div>
   )
